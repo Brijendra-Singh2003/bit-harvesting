@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>367075543538-2njturua4brv9boo1muoiljmk80clfkf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.367075543538-2njturua4brv9boo1muoiljmk80clfkf</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>367075543538-urvpaivvf2jjudoronc4j9k97bifpdbb.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA6CXdYHi7xc2L7cL5ZT9NbWEd71Jc-hcM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>367075543538</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.bitHarvesting</string>
+	<key>PROJECT_ID</key>
+	<string>bit-harvesting</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bit-harvesting.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:367075543538:ios:ee6bde31c0edd6abd8036b</string>
+	<key>DATABASE_URL</key>
+	<string>https://bit-harvesting-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

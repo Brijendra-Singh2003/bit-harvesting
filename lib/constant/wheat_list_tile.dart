@@ -1,3 +1,4 @@
+import 'package:bit_harvesting/constant/data_set.dart';
 import 'package:flutter/material.dart';
 
 class WheatListTile extends StatelessWidget {
@@ -7,26 +8,29 @@ class WheatListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green.shade400,
         centerTitle: true,
-        title: const Text('Bit Harvesting'),
+        foregroundColor: Colors.white,
+        title: const Text('Seeds'),
       ),
       body: ListView.builder(
-          itemCount: 20,
+          itemCount: DataSet.seeds.length,
           itemBuilder: (context, index) {
-            return const ListTile(
+            Map<String, dynamic> singleValue = DataSet.seeds[index];
+            return ListTile(
               trailing: SizedBox(
                 height: 40,
                 child: Column(
                   children: [
-                    Text(
+                    const Text(
                       'Quantity',
                       style: TextStyle(
                         fontSize: 13,
                       ),
                     ),
                     Text(
-                      '80kg',
-                      style: TextStyle(
+                      singleValue['quantity'].toString(),
+                      style: const TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.bold,
                       ),
@@ -37,13 +41,13 @@ class WheatListTile extends StatelessWidget {
               leading: CircleAvatar(
                 child: Image(
                   image: NetworkImage(
-                    'https://img.freepik.com/premium-photo/wheat-grain-bag_54391-136.jpg?size=626&ext=jpg',
+                    singleValue['image'],
                   ),
                 ),
               ),
-              title: Text('Wheat'),
+              title: Text(singleValue['name']),
               subtitle: Text(
-                'Exp Dt : 24-july',
+                'Exp Dt : ${singleValue['exp']}',
               ),
             );
           }),

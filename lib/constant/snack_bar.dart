@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class CustomSnackBar extends StatelessWidget {
-  final String data;
-  const CustomSnackBar({super.key, required this.data});
-
-  @override
-  Widget build(BuildContext context) {
-    return ScaffoldMessenger(
-      child: SnackBar(
+class CustomSnackBar {
+  final String content;
+  final BuildContext context;
+  const CustomSnackBar({
+    required this.content,
+    required this.context,
+  });
+  void displaySnackBar() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
         content: Text(
-          data,
+          content,
+          style: const TextStyle(fontSize: 16),
         ),
       ),
     );

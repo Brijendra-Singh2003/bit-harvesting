@@ -1,3 +1,5 @@
+import 'package:bit_harvesting/features/auth/screens/my_home_page.dart';
+import 'package:bit_harvesting/features/selling_product/screens/product_sell_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -15,35 +17,41 @@ class HomeDrawer extends StatelessWidget {
             DrawerHeader(
               decoration: const BoxDecoration(color: Colors.white),
               child: Text(
-                'Bit Build Kissan',
+                'Product Detail',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
             ),
             ListTile(
               onTap: () {
-                // Navigator.of(context).push(
-                //   MaterialPageRoute(
-                //     builder: (_) => const MainScreen(),
-                //   ),
-                // );
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => const MyHomePage(),
+                  ),
+                );
               },
               leading: const Icon(Icons.home),
               title: const Text("Home"),
             ),
             ListTile(
-                onTap: () {
-                  // Navigator.of(context).push(
-                  //   MaterialPageRoute(
-                  //       builder: (context) => const DonateScreen(),
-                  //       ),
-                  // );
-                },
-                leading: const Icon(Icons.volunteer_activism_rounded),
-                title: const Text("Donate")),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const ProductSellScreen(),
+                  ),
+                );
+              },
+              leading: const Icon(Icons.sell_outlined),
+              title: const Text(
+                "Sell You Product",
+              ),
+            ),
             ListTile(
-                onTap: () {},
-                leading: const Icon(Icons.admin_panel_settings_outlined),
-                title: const Text("Admin Panel")),
+              onTap: () {},
+              leading: const Icon(Icons.admin_panel_settings_outlined),
+              title: const Text(
+                "Admin Panel",
+              ),
+            ),
             ListTile(
               onTap: () {
                 FirebaseAuth.instance.signOut();
